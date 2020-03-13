@@ -1,4 +1,5 @@
 import autopy
+import Configuration.Config
 
 class OutputHandler:
     def downlaodOutput(self, ahk):
@@ -18,7 +19,7 @@ class OutputHandler:
         ahk.run_script('SetWinDelay, 10')
 
         # save the output file
-        ahk.send_raw("$h123.xls",100)
+        ahk.send_raw("$" + Configuration.Config.DATA_PATH + "\h123.xls", 100)
         ahk.run_script('Send, {ENTER}')
 
         winOutputSubTab.close()
