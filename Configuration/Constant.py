@@ -44,6 +44,10 @@ headerToClassNN = {
     "distribution type thickness": "ComboBox2",
     "coefficient of variation thickness": "Edit2",
 
+    "top": "Button1",
+    "middle": "Button3",
+    "bottom": "Button5",
+
     "criteria top": "ComboBox1",
     "threshold top": "Edit1",
     "target percentile top": "Edit16",
@@ -51,12 +55,12 @@ headerToClassNN = {
     "k1 top": "Edit2",
     "k2 top": "Edit3",
 
-    "criteria medium": "ComboBox2",
-    "threshold medium": "Edit4",
-    "target percentile medium": "Edit17",
-    "transfer function box medium": "Button4",
-    "k1 medium": "Edit5",
-    "k2 medium": "Edit6",
+    "criteria middle": "ComboBox2",
+    "threshold middle": "Edit4",
+    "target percentile middle": "Edit17",
+    "transfer function box middle": "Button4",
+    "k1 middle": "Edit5",
+    "k2 middle": "Edit6",
 
     "criteria bottom": "ComboBox3",
     "threshold bottom": "Edit7",
@@ -224,6 +228,8 @@ headerToClassNN = {
 
 AHK_EXE = ", ahk_exe PerRoad44.exe\n"
 CONTROL_GET = "ControlGet, var, Checked,,"
+CONTROL_CHECK = "Control, Check,,"
+CONTROL_UNCHECK = "Control, Uncheck,,"
 CONTROL_CLICK = "ControlClick,"
 CONTROL_CHOOSE = "Control, Choose,"
 CONTROL_CHOOSE_STRING = "Control, ChooseString,"

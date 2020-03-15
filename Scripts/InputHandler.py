@@ -28,72 +28,80 @@ class InputHandler:
             materialType1 = data["material type layer 1"]
             self.mt1List = list(materialType1.iloc[currInputSet])
             self.mt1Index = 0
+            self.mt1Count = 1
         # print(list(materialType1.iloc[0])) # prints the first row of the dataframe ie, for the 1st input set
 
         if "material type layer 2" in data.columns:
             materialType2 = data["material type layer 2"]
             self.mt2List = list(materialType2.iloc[currInputSet])
             self.mt2Index = 0
+            self.mt2Count = 1
 
         if "material type layer 3" in data.columns:
             materialType3 = data["material type layer 3"]
             self.mt3List = list(materialType3.iloc[currInputSet])
             self.mt3Index = 0
+            self.mt3Count = 1
 
         if "material type layer 4" in data.columns:
             materialType4 = data["material type layer 4"]
             self.mt4List = list(materialType4.iloc[currInputSet])
             self.mt4Index = 0
+            self.mt4Count = 1
 
         if "material type layer 5" in data.columns:
             materialType5 = data["material type layer 5"]
             self.mt5List = list(materialType5.iloc[currInputSet])
             self.mt5Index = 0
+            self.mt5Count = 1
 
         if "grade upper layer 1" in data.columns:
             gradeUpper1 = data["grade upper layer 1"]
             self.gu1List = list(gradeUpper1.iloc[currInputSet])
             self.gu1Index = 0
+            self.gu1Count = 1
 
         if "grade upper layer 2" in data.columns:
             gradeUpper2 = data["grade upper layer 2"]
             self.gu2List = list(gradeUpper2.iloc[currInputSet])
             self.gu2Index = 0
+            self.gu2Count = 1
 
         if "grade upper layer 3" in data.columns:
             gradeUpper3 = data["grade upper layer 3"]
             self.gu3List = list(gradeUpper3.iloc[currInputSet])
             self.gu3Index = 0
+            self.gu3Count = 1
 
         if "grade upper layer 4" in data.columns:
             gradeUpper4 = data["grade upper layer 4"]
             self.gu4List = list(gradeUpper4.iloc[currInputSet])
             self.gu4Index = 0
+            self.gu4Count = 1
 
         if "grade lower layer 1" in data.columns:
             gradeLower1 = data["grade lower layer 1"]
             self.gl1List = list(gradeLower1.iloc[currInputSet])
             self.gl1Index = 0
+            self.gl1Count = 1
 
         if "grade lower layer 2" in data.columns:
             gradeLower2 = data["grade lower layer 2"]
             self.gl2List = list(gradeLower2.iloc[currInputSet])
             self.gl2Index = 0
+            self.gl2Count = 1
 
         if "grade lower layer 3" in data.columns:
             gradeLower3 = data["grade lower layer 3"]
             self.gl3List = list(gradeLower3.iloc[currInputSet])
             self.gl3Index = 0
+            self.gl3Count = 1
 
         if "grade lower layer 4" in data.columns:
             gradeLower4 = data["grade lower layer 4"]
             self.gl4List = list(gradeLower4.iloc[currInputSet])
             self.gl4Index = 0
-
-        if "grade lower layer 4" in data.columns:
-            gradeLower4 = data["grade lower layer 4"]
-            self.gl4List = list(gradeLower4.iloc[currInputSet])
-            self.gl4Index = 0
+            self.gl4Count = 1
 
         if "modulus layer 1" in data.columns:
             mod1 = data["modulus layer 1"]
@@ -130,6 +138,7 @@ class InputHandler:
             self.pr1List = list(pr1.iloc[currInputSet])
             # print(self.pr1List)
             self.pr1Index = 0
+            self.pr1Count = 1
 
         if "poisons ratio layer 2" in data.columns:
             pr2 = data["poisons ratio layer 2"]
@@ -137,51 +146,64 @@ class InputHandler:
             # print("hi")
             # print(self.pr2List)
             self.pr2Index = 0
+            self.pr2Count = 1
 
         if "poisons ratio layer 3" in data.columns:
             pr3 = data["poisons ratio layer 3"]
             self.pr3List = list(pr3.iloc[currInputSet])
             self.pr3Index = 0
+            self.pr3Count = 1
 
         if "poisons ratio layer 4" in data.columns:
             pr4 = data["poisons ratio layer 4"]
             self.pr4List = list(pr4.iloc[currInputSet])
             self.pr4Index = 0
+            self.pr4Count = 1
 
         if "poisons ratio layer 5" in data.columns:
             pr5 = data["poisons ratio layer 5"]
             self.pr5List = list(pr5.iloc[currInputSet])
             self.pr5Index = 0
+            self.pr5Count = 1
 
         if "thickness layer 1" in data.columns:
             thickness1 = data["thickness layer 1"]
             self.thickness1List = list(thickness1.iloc[currInputSet])
             # print(self.thickness1List)
             self.thickness1Index = 0
+            self.t1Count = 1
 
         if "thickness layer 2" in data.columns:
             thickness2 = data["thickness layer 2"]
             self.thickness2List = list(thickness2.iloc[currInputSet])
             # print(self.thickness2List)
             self.thickness2Index = 0
+            self.t2Count = 1
 
         if "thickness layer 3" in data.columns:
             thickness3 = data["thickness layer 3"]
             self.thickness3List = list(thickness3.iloc[currInputSet])
             # print(self.thickness3List)
             self.thickness3Index = 0
+            self.t3Count = 1
 
         if "thickness layer 4" in data.columns:
             thickness4 = data["thickness layer 4"]
             self.thickness4List = list(thickness4.iloc[currInputSet])
             # print(self.thickness4List)
             self.thickness4Index = 0
+            self.t4Count = 1
 
         if "distribution type modulus" in data.columns:
             dtm = data["distribution type modulus"]
             self.dtmList = list(dtm.iloc[currInputSet])
             # print(self.dtmList)
             self.dtmIndex = 0
+            self.dtm1Count = 1
+            self.dtm2Count = 1
+            self.dtm3Count = 1
+            self.dtm4Count = 1
+            self.dtm5Count = 1
 
         if "distribution type thickness" in data.columns:
             dtt = data["distribution type thickness"]
@@ -192,7 +214,6 @@ class InputHandler:
         if "coefficient of variation modulus" in data.columns:
             cvm = data["coefficient of variation modulus"]
             self.cvmList = list(cvm.iloc[currInputSet])
-            # print(self.dtmList)
             self.cvmIndex = 0
 
         if "coefficient of variation thickness" in data.columns:
@@ -200,6 +221,126 @@ class InputHandler:
             self.cvtList = list(cvt.iloc[currInputSet])
             # print(self.dtmList)
             self.cvtIndex = 0
+
+        if "criteria top" in data.columns:
+            ct = data["criteria top"]
+            self.ctList = list(ct.iloc[currInputSet])
+            # print(self.ctList)
+            self.ctIndex = 0
+            self.ct1Count = 1
+            self.ct2Count = 1
+            self.ct3Count = 1
+            self.ct4Count = 1
+            self.ct5Count = 1
+
+        if "criteria middle" in data.columns:
+            cm = data["criteria middle"]
+            self.cmList = list(cm.iloc[currInputSet])
+            self.cmIndex = 0
+            self.cm1Count = 1
+            self.cm2Count = 1
+            self.cm3Count = 1
+            self.cm4Count = 1
+            self.cm5Count = 1
+
+        if "criteria bottom" in data.columns:
+            cb = data["criteria bottom"]
+            self.cbList = list(cb.iloc[currInputSet])
+            self.cbIndex = 0
+            self.cb1Count = 1
+            self.cb2Count = 1
+            self.cb3Count = 1
+            self.cb4Count = 1
+            self.cb5Count = 1
+
+        if "threshold top" in data.columns:
+            tt = data["threshold top"]
+            self.ttList = list(tt.iloc[currInputSet])
+            self.ttIndex = 0
+
+        if "threshold middle" in data.columns:
+            tm = data["threshold middle"]
+            self.tmList = list(tm.iloc[currInputSet])
+            self.tmIndex = 0
+            self.tmCount = 1
+
+        if "threshold bottom" in data.columns:
+            tb = data["threshold bottom"]
+            self.tbList = list(tb.iloc[currInputSet])
+            self.tbIndex = 0
+            self.tbCount = 1
+
+        if "target percentile top" in data.columns:
+            tpt = data["target percentile top"]
+            self.tptList = list(tpt.iloc[currInputSet])
+            self.tptIndex = 0
+            self.tptCount = 1
+
+        if "target percentile middle" in data.columns:
+            tpm = data["target percentile middle"]
+            self.tpmList = list(tpm.iloc[currInputSet])
+            self.tpmIndex = 0
+            self.tpmCount = 1
+
+        if "target percentile bottom" in data.columns:
+            tpb = data["criteria bottom"]
+            self.tpbList = list(tpb.iloc[currInputSet])
+            self.tpbIndex = 0
+            self.tpbCount = 1
+
+        if "transfer function box top" in data.columns:
+            tfbt = data["transfer function box top"]
+            self.tfbtList = list(tfbt.iloc[currInputSet])
+            self.tfbtIndex = 0
+            self.tfbtCount = 1
+
+        if "transfer function box middle" in data.columns:
+            tfbm = data["transfer function box middle"]
+            self.tfbmList = list(tfbm.iloc[currInputSet])
+            self.tfbmIndex = 0
+            self.tfbmCount = 1
+
+        if "transfer function box bottom" in data.columns:
+            tfbb = data["transfer function box bottom"]
+            self.tfbbList = list(tfbb.iloc[currInputSet])
+            self.tfbbIndex = 0
+            self.tfbbCount = 1
+
+        if "k1 top" in data.columns:
+            k1t = data["k1 top"]
+            self.k1tList = list(k1t.iloc[currInputSet])
+            self.k1tIndex = 0
+            self.k1tCount = 1
+
+        if "k1 middle" in data.columns:
+            k1m = data["k1 middle"]
+            self.k1mList = list(k1m.iloc[currInputSet])
+            self.k1mIndex = 0
+            self.k1mCount = 1
+
+        if "k1 bottom" in data.columns:
+            k1b = data["k1 bottom"]
+            self.k1bList = list(k1b.iloc[currInputSet])
+            self.k1bIndex = 0
+            self.k1bCount = 1
+
+        if "k2 top" in data.columns:
+            k2t = data["k2 top"]
+            self.k2tList = list(k2t.iloc[currInputSet])
+            self.k2tIndex = 0
+            self.k2tCount = 1
+
+        if "k2 middle" in data.columns:
+            k2m = data["k2 middle"]
+            self.k2mList = list(k2m.iloc[currInputSet])
+            self.k2mIndex = 0
+            self.k2mCount = 1
+
+        if "k2 bottom" in data.columns:
+            k2b = data["k2 bottom"]
+            self.k2bList = list(k2b.iloc[currInputSet])
+            self.k2bIndex = 0
+            self.k2bCount = 1
 
 
         for i in data.columns:
@@ -225,6 +366,65 @@ class InputHandler:
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
+            elif i == "duration summer":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration summer"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "duration fall":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration fall"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "duration winter":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration winter"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "duration spring":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration spring"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "duration spring 2":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration spring 2"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "mean air summer":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air summer"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "mean air fall":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air fall"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "mean air winter":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air winter"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "mean air spring":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air spring"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
+
+            elif i == "mean air spring 2":
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air spring 2"][currInputSet])
+                ahkScript = ahkHandler.readFile()
+                ahk.run_script(ahkScript, blocking=False)
+                time.sleep(0.5)
 
             elif i == "current season":
                 # time.sleep(2)
@@ -257,35 +457,19 @@ class InputHandler:
                 ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", setSeason,
                                         Config.DATA_PATH + r"\mod5Auto.ahk")
 
-                ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", setSeason,
-                                        Config.DATA_PATH + r"\var1Auto.ahk")
-
-                ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", setSeason,
-                                        Config.DATA_PATH + r"\var2Auto.ahk")
-
-                ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", setSeason,
-                                        Config.DATA_PATH + r"\var3Auto.ahk")
-
-                ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", setSeason,
-                                        Config.DATA_PATH + r"\var4Auto.ahk")
-
-                ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", setSeason,
-                                        Config.DATA_PATH + r"\var5Auto.ahk")
-                # ahkScript = ahkHandler.readFile()
-                # ahk.run_script(ahkScript, blocking=False)
-
-            elif i == "material type layer 1":
+            elif i == "material type layer 1" and self.mt1Count > 0:
                 num = '1'
-                if self.mt1List[self.mt1Index] is nan:
-                    self.mt1Index += 1
+                if self.mt1List[0] is nan:
+                    # self.mt1Index += 1
                     continue
 
-                if self.mt1List[self.mt1Index].lower() == "ac":
+                if self.mt1List[0].lower() == "ac":
                     num = '1'
-                elif self.mt1List[self.mt1Index].lower() == "other":
+                elif self.mt1List[0].lower() == "other":
                     num = '2'
 
-                self.mt1Index += 1
+                # self.mt1Index += 1
+                self.mt1Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -294,7 +478,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "grade upper layer 1":
+            elif i == "grade upper layer 1" and self.gu1Count > 0:
                 num = '1'
                 if self.gu1List[self.gu1Index] is nan:
                     self.gu1Index += 1
@@ -316,6 +500,7 @@ class InputHandler:
                     num = '7'
 
                 self.gu1Index += 1
+                self.gu1Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -323,7 +508,7 @@ class InputHandler:
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
-            elif i == "grade lower layer 1":
+            elif i == "grade lower layer 1" and self.gl1Count > 0:
                 num = '1'
                 if self.gl1List[self.gl1Index] is nan:
                     self.gl1Index += 1
@@ -343,6 +528,7 @@ class InputHandler:
                     num = '6'
 
                 self.gl1Index += 1
+                self.gl1Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -359,7 +545,7 @@ class InputHandler:
                 ahkHandler.appendToFile(Constant.headerToClassNN[i], "entry", self.mod1List[self.mod1Index], Config.DATA_PATH + r"\mod1Auto.ahk")
                 self.mod1Index += 1
 
-            elif i == "poisons ratio layer 1":
+            elif i == "poisons ratio layer 1" and self.pr1Count > 0:
                 time.sleep(0.5)
                 if self.pr1List[self.pr1Index] is nan:
                     self.pr1Index += 1
@@ -367,6 +553,7 @@ class InputHandler:
 
                 self.varLayer = "variability button layer 1"
                 self.perLayer = "performance button layer 1"
+                self.pr1Count = 0
 
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", self.pr1List[self.pr1Index])
                 ahkScript = ahkHandler.readFile()
@@ -375,7 +562,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "thickness layer 1":
+            elif i == "thickness layer 1"  and self.t1Count > 0:
                 # time.sleep(0.5)
                 if self.thickness1List[self.thickness1Index] is nan:
                     self.thickness1Index += 1
@@ -386,122 +573,170 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.thickness1Index += 1
+                self.t1Count = 0
                 time.sleep(0.5)
 
-            elif i == "distribution type modulus" and self.varLayer == "variability button layer 1":
-                print(i)
-                num = '1'
+            elif i == "distribution type modulus" and self.varLayer == "variability button layer 1" and self.dtm1Count > 0:
+                # time.sleep(0.5)
+                # print(i)
+                num1 = '1'
                 if self.dtmList[self.dtmIndex].lower() == "normal":
-                    num = '1'
+                    num1 = '1'
                 elif self.dtmList[self.dtmIndex].lower() == "log normal" or self.dtmList[self.dtmIndex].lower() == "log-normal":
-                    num = '2'
+                    num1 = '2'
+
+                num2 = '1'
+                if self.dttList[self.dttIndex].lower() == "normal":
+                    num2 = '1'
+                elif self.dttList[self.dttIndex].lower() == "log normal" or self.dttList[self.dttIndex].lower() == "log-normal":
+                    num2 = '2'
 
                 path = Config.DATA_PATH + r"\var1Auto.ahk"
-                # if "layer 1" in self.varLayer:
-                #     # print(self.varLayer, path)
-                #     path = Config.DATA_PATH + r"\var1Auto.ahk"
-                # elif "layer 2" in self.varLayer:
-                #     # print(self.varLayer, path)
-                #     path = Config.DATA_PATH + r"\var2Auto.ahk"
-                # elif "layer 3" in self.varLayer:
-                #     # print(self.varLayer, path)
-                #     path = Config.DATA_PATH + r"\var3Auto.ahk"
-                # elif "layer 4" in self.varLayer:
-                #     # print(self.varLayer, path)
-                #     path = Config.DATA_PATH + r"\var4Auto.ahk"
-                # elif "layer 5" in self.varLayer:
-                #     # print(self.varLayer, path)
-                #     path = Config.DATA_PATH + r"\var5Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[i],"variabilityDropDown", num1, path, self.varLayer)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation modulus"], "entry", self.cvmList[self.cvmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["distribution type thickness"], "simpleDropDown", num2, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation thickness"], "lastEntry", self.cvtList[self.cvtIndex], path)
+                self.dtmIndex += 1
+                self.cvmIndex += 1
+                self.dttIndex += 1
+                self.cvtIndex += 1
+                self.dtm1Count = 0
 
+                time.sleep(0.5)
 
-                # ahkHandler.appendToFile(Constant.headerToClassNN[i],"variabilityDropDown", num, path, self.varLayer)
-                # ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation modulus"], "entry", self.cvmList[self.cvmIndex], path)
-                # ahkHandler.appendToFile(Constant.headerToClassNN["distribution type thickness"], "dropDown", num, path)
-                # ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation thickness"], "lastEntry", self.cvtList[self.cvtIndex], path)
-                # self.dtmIndex += 1
-                # self.cvmIndex += 1
-                # self.dttIndex += 1
-                # self.cvtIndex += 1
-                #
-                # # ahkHandler.writeFile(Constant.headerToClassNN[i], "variabilityDropDown", num, self.varLayer)
-                # ahkScript = ahkHandler.readFile(path)
-                # # print(ahkScript)
-                # ahk.run_script(ahkScript, blocking=False)
-                # time.sleep(0.5)
-                # ahkHandler.clearFile(path)
+            elif i == "criteria top" and self.perLayer == "performance button layer 1" and self.ct1Count > 0:
+                path = Config.DATA_PATH + r"\per1Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[self.perLayer], "clickButton", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
 
-            # elif i == "coefficient of variation modulus":
-            #     path = Config.DATA_PATH + r"\var1Auto.ahk"
-            #     if "layer 1" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var1Auto.ahk"
-            #     elif "layer 2" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var2Auto.ahk"
-            #     elif "layer 3" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var3Auto.ahk"
-            #     elif "layer 4" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var4Auto.ahk"
-            #     elif "layer 5" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var5Auto.ahk"
-            #
-            #     ahkHandler.appendToFile(Constant.headerToClassNN[i], "entry", self.cvmList[self.cvmIndex], path)
-            #     # ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", self.cvmList[self.cvmIndex])
-            #     # ahkScript = ahkHandler.readFile()
-            #     # ahk.run_script(ahkScript, blocking=False)
-            #     # time.sleep(0.5)
-            #     self.cvmIndex += 1
+                num = '1'
+                if self.ctList[self.ctIndex].lower() == "Horizontal Stress".lower():
+                    num = '1'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.ctList[self.ctIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.ctList[self.ctIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.ctList[self.ctIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
 
-            #     ControlSetText, Edit1, 20, ahk_exe PerRoad44.exe
-            # Control, Choose, 2, ComboBox2, ahk_exe PerRoad44.exe
-            # ControlSetText, Edit2, 6, ahk_exe PerRoad44.exe
+                ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["top"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria top"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold top"], "entry", self.ttList[self.ttIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile top"], "entry", self.tptList[self.tptIndex], path)
 
-            # elif i == "distribution type thickness":
-            #     num = '1'
-            #     if self.dttList[self.dttIndex].lower() == "normal":
-            #         num = '1'
-            #     elif self.dttList[self.dttIndex].lower() == "log normal" or self.dttList[self.dttIndex].lower() == "log-normal":
-            #         num = '2'
-            #
-            #     path = Config.DATA_PATH + r"\var1Auto.ahk"
-            #     if "layer 1" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var1Auto.ahk"
-            #     elif "layer 2" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var2Auto.ahk"
-            #     elif "layer 3" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var3Auto.ahk"
-            #     elif "layer 4" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var4Auto.ahk"
-            #     elif "layer 5" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var5Auto.ahk"
-            #
-            #     self.dttIndex += 1
-            #     ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num, path)
-                # ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num,)
-                # ahkScript = ahkHandler.readFile()
-                # ahk.run_script(ahkScript, blocking=False)
+                self.ttIndex += 1
+                self.tptIndex += 1
+
+                if "transfer function box top" in data.columns and self.tfbtList[self.tfbtIndex] == 'yes':
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box top"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 top"], "entry", self.k1tList[self.k1tIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 top"], "entry", self.k2tList[self.k2tIndex], path)
+                    self.tfbtIndex += 1
+                    self.k1tIndex += 1
+                    self.k2tIndex += 1
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.ct1Count = 0
                 # time.sleep(0.5)
 
-            # elif i == "coefficient of variation thickness":
-            #     path = Config.DATA_PATH + r"\var1Auto.ahk"
-            #     if "layer 1" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var1Auto.ahk"
-            #     elif "layer 2" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var2Auto.ahk"
-            #     elif "layer 3" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var3Auto.ahk"
-            #     elif "layer 4" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var4Auto.ahk"
-            #     elif "layer 5" in self.varLayer:
-            #         path = Config.DATA_PATH + r"\var5Auto.ahk"
-            #
-            #     ahkHandler.appendToFile(Constant.headerToClassNN[i], "lastEntry", self.cvtList[self.cvtIndex], path)
-            #     # ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", self.cvtList[self.cvtIndex])
-            #     # ahkScript = ahkHandler.readFile()
-            #     # ahk.run_script(ahkScript, blocking=False)
-            #     # ahk.run_script("Send, {Enter}")
-            #     self.cvtIndex += 1
-                # time.sleep(0.5)
+            elif i == "criteria middle" and self.perLayer == "performance button layer 1" and self.cm1Count > 0:
+                path = Config.DATA_PATH + r"\per1Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
 
-            elif i == "material type layer 2":
+                num = '1'
+                if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cmList[self.cmIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cmList[self.cmIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cmList[self.cmIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tmList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpmList[self.tpmIndex], path)
+
+                self.tmIndex += 1
+                self.tpmIndex += 1
+
+                if "transfer function box middle" in data.columns and self.tfbmList[self.tfbmIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box middle"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 middle"], "entry", self.k1mList[self.k1mIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 middle"], "entry", self.k2mList[self.k2mIndex], path)
+                    self.tfbmIndex += 1
+                    self.k1mIndex += 1
+                    self.k2mIndex += 1
+
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.cm1Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "criteria bottom" and self.perLayer == "performance button layer 1" and self.cb1Count > 0:
+                path = Config.DATA_PATH + r"\per1Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cbList[self.cbIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cbList[self.cbIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cbList[self.cbIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tbList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpbList[self.tpbIndex], path)
+
+                self.tbIndex += 1
+                self.tpbIndex += 1
+
+                if "transfer function box bottom" in data.columns and self.tfbbList[self.tfbbIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box bottom"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 bottom"], "entry", self.k1bList[self.k1bIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 bottom"], "entry", self.k2bList[self.k2bIndex], path)
+                    self.tfbbIndex += 1
+                    self.k1bIndex += 1
+                    self.k2bIndex += 1
+
+
+                ahkHandler.appendToFile('', 'sleep', '', path)
+                self.cb1Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "material type layer 2" and self.mt2Count > 0:
                 num = '1'
                 if self.mt2List[self.mt2Index] is nan:
                     self.mt2List[self.mt2Index] += 1
@@ -529,18 +764,20 @@ class InputHandler:
                     num = '10'
 
                 self.mt2Index += 1
+                self.mt2Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 # print(i)
+                # print(num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkScript = ahkHandler.readFile()
                 # print(ahkScript)
                 ahk.run_script(ahkScript, blocking=False)
-                # time.sleep(0.5)
+                time.sleep(0.5)
 
 
 
-            elif i == "grade upper layer 2":
+            elif i == "grade upper layer 2" and self.gu2Count > 0:
                 num = '1'
                 if self.gu2List[self.gu2Index] is nan:
                     self.gu2Index += 1
@@ -562,6 +799,7 @@ class InputHandler:
                     num = '7'
 
                 self.gu2Index += 1
+                self.gu2Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -570,7 +808,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "grade lower layer 2":
+            elif i == "grade lower layer 2" and self.gl2Count > 0:
                 num = '1'
                 if self.gl2List[self.gl2Index] is nan:
                     self.gl1Index += 1
@@ -590,6 +828,7 @@ class InputHandler:
                     num = '6'
 
                 self.gl2Index += 1
+                self.gl2Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -608,7 +847,7 @@ class InputHandler:
                 # ahk.run_script(ahkScript, blocking=False)
                 self.mod2Index += 1
 
-            elif i == "poisons ratio layer 2":
+            elif i == "poisons ratio layer 2" and self.pr2Count > 0:
                 # time.sleep(0.5)
                 if self.pr2List[self.pr2Index] is nan:
                     self.pr2Index += 1
@@ -621,10 +860,11 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.pr2Index += 1
+                self.pr2Count = 0
                 time.sleep(0.5)
 
 
-            elif i == "thickness layer 2":
+            elif i == "thickness layer 2" and self.t2Count > 0:
                 # time.sleep(0.5)
                 if self.thickness2List[self.thickness2Index] is nan:
                     self.thickness2Index += 1
@@ -636,10 +876,175 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.thickness2Index += 1
+                self.t2Count = 0
                 time.sleep(0.5)
 
+            elif i == "distribution type modulus" and self.varLayer == "variability button layer 2" and self.dtm2Count > 0:
+                # time.sleep(0.5)
+                # print(i)
+                num1 = '1'
+                if self.dtmList[self.dtmIndex].lower() == "normal":
+                    num1 = '1'
+                elif self.dtmList[self.dtmIndex].lower() == "log normal" or self.dtmList[self.dtmIndex].lower() == "log-normal":
+                    num1 = '2'
 
-            elif i == "material type layer 3":
+                num2 = '1'
+                if self.dttList[self.dttIndex].lower() == "normal":
+                    num2 = '1'
+                elif self.dttList[self.dttIndex].lower() == "log normal" or self.dttList[self.dttIndex].lower() == "log-normal":
+                    num2 = '2'
+
+                path = Config.DATA_PATH + r"\var2Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[i],"variabilityDropDown", num1, path, self.varLayer)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation modulus"], "entry", self.cvmList[self.cvmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["distribution type thickness"], "simpleDropDown", num2, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation thickness"], "lastEntry", self.cvtList[self.cvtIndex], path)
+                self.dtmIndex += 1
+                self.cvmIndex += 1
+                self.dttIndex += 1
+                self.cvtIndex += 1
+                self.dtm2Count = 0
+
+                time.sleep(0.5)
+
+            elif i == "criteria top" and self.perLayer == "performance button layer 2" and self.ct2Count > 0:
+                path = Config.DATA_PATH + r"\per2Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[self.perLayer], "clickButton", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.ctList[self.ctIndex].lower() == "Horizontal Stress".lower():
+                    num = '1'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.ctList[self.ctIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.ctList[self.ctIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.ctList[self.ctIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["top"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria top"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold top"], "entry", self.ttList[self.ttIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile top"], "entry", self.tptList[self.tptIndex], path)
+
+                self.ttIndex += 1
+                self.tptIndex += 1
+
+                if "transfer function box top" in data.columns and self.tfbtList[self.tfbtIndex] == 'yes':
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box top"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 top"], "entry", self.k1tList[self.k1tIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 top"], "entry", self.k2tList[self.k2tIndex], path)
+                    self.tfbtIndex += 1
+                    self.k1tIndex += 1
+                    self.k2tIndex += 1
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.ct2Count = 0
+                # time.sleep(0.5)
+
+            elif i == "criteria middle" and self.perLayer == "performance button layer 2" and self.cm2Count > 0:
+                path = Config.DATA_PATH + r"\per2Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cmList[self.cmIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cmList[self.cmIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cmList[self.cmIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tmList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpmList[self.tpmIndex], path)
+
+                self.tmIndex += 1
+                self.tpmIndex += 1
+
+                if "transfer function box middle" in data.columns and self.tfbmList[self.tfbmIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box middle"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 middle"], "entry", self.k1mList[self.k1mIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 middle"], "entry", self.k2mList[self.k2mIndex], path)
+                    self.tfbmIndex += 1
+                    self.k1mIndex += 1
+                    self.k2mIndex += 1
+
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', 'sleep', '', path)
+                self.cm2Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "criteria bottom" and self.perLayer == "performance button layer 2" and self.cb2Count > 0:
+                path = Config.DATA_PATH + r"\per2Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cbList[self.cbIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cbList[self.cbIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cbList[self.cbIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry",
+                                        self.tbList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry",
+                                        self.tpbList[self.tpbIndex], path)
+
+                self.tbIndex += 1
+                self.tpbIndex += 1
+
+                if "transfer function box bottom" in data.columns and self.tfbbList[self.tfbbIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box bottom"], "checkBox",
+                                            True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 bottom"], "entry",
+                                            self.k1bList[self.k1bIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 bottom"], "entry",
+                                            self.k2bList[self.k2bIndex], path)
+                    self.tfbbIndex += 1
+                    self.k1bIndex += 1
+                    self.k2bIndex += 1
+
+                ahkHandler.appendToFile('', 'sleep', '', path)
+                self.cb2Count = 0
+            #     time.sleep(0.5)
+
+
+            elif i == "material type layer 3" and self.mt3Count > 0:
                 num = '1'
                 if self.mt3List[self.mt3Index] is nan:
                     self.mt3List[self.mt3Index] += 1
@@ -667,6 +1072,7 @@ class InputHandler:
                     num = '10'
 
                 self.mt3Index += 1
+                self.mt3Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -675,7 +1081,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "grade upper layer 3":
+            elif i == "grade upper layer 3" and self.gu3Count > 0:
                 num = '1'
                 if self.gu3List[self.gu3Index] is nan:
                     self.gu3Index += 1
@@ -697,6 +1103,7 @@ class InputHandler:
                     num = '7'
 
                 self.gu3Index += 1
+                self.gu3Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -705,7 +1112,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "grade lower layer 3":
+            elif i == "grade lower layer 3" and self.gl3Count > 0:
                 num = '1'
                 if self.gl3List[self.gl3Index] is nan:
                     self.gl3Index += 1
@@ -725,6 +1132,7 @@ class InputHandler:
                     num = '6'
 
                 self.gl3Index += 1
+                self.gl3Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -743,7 +1151,7 @@ class InputHandler:
                 # ahk.run_script(ahkScript, blocking=False)
                 self.mod3Index += 1
 
-            elif i == "poisons ratio layer 3":
+            elif i == "poisons ratio layer 3" and self.pr3Count > 0:
                 # time.sleep(0.5)
                 if self.pr3List[self.pr3Index] is nan:
                     self.pr3Index += 1
@@ -756,10 +1164,11 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.pr3Index += 1
+                self.pr3Count = 0
                 time.sleep(0.5)
 
 
-            elif i == "thickness layer 3":
+            elif i == "thickness layer 3" and self.t3Count > 0:
                 # time.sleep(0.5)
                 if self.thickness3List[self.thickness3Index] is nan:
                     self.thickness3Index += 1
@@ -771,10 +1180,171 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.thickness3Index += 1
+                self.t3Count = 0
+                time.sleep(0.5)
+
+            elif i == "distribution type modulus" and self.varLayer == "variability button layer 3" and self.dtm3Count > 0:
+                # time.sleep(0.5)
+                # print(i)
+                num1 = '1'
+                if self.dtmList[self.dtmIndex].lower() == "normal":
+                    num1 = '1'
+                elif self.dtmList[self.dtmIndex].lower() == "log normal" or self.dtmList[self.dtmIndex].lower() == "log-normal":
+                    num1 = '2'
+
+                num2 = '1'
+                if self.dttList[self.dttIndex].lower() == "normal":
+                    num2 = '1'
+                elif self.dttList[self.dttIndex].lower() == "log normal" or self.dttList[self.dttIndex].lower() == "log-normal":
+                    num2 = '2'
+
+                path = Config.DATA_PATH + r"\var3Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[i],"variabilityDropDown", num1, path, self.varLayer)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation modulus"], "entry", self.cvmList[self.cvmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["distribution type thickness"], "simpleDropDown", num2, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation thickness"], "lastEntry", self.cvtList[self.cvtIndex], path)
+                self.dtmIndex += 1
+                self.cvmIndex += 1
+                self.dttIndex += 1
+                self.cvtIndex += 1
+                self.dtm3Count = 0
+
                 time.sleep(0.5)
 
 
-            elif i == "material type layer 4":
+            elif i == "criteria top" and self.perLayer == "performance button layer 3" and self.ct3Count > 0:
+                path = Config.DATA_PATH + r"\per3Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[self.perLayer], "clickButton", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.ctList[self.ctIndex].lower() == "Horizontal Stress".lower():
+                    num = '1'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.ctList[self.ctIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.ctList[self.ctIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.ctList[self.ctIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["top"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria top"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold top"], "entry", self.ttList[self.ttIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile top"], "entry", self.tptList[self.tptIndex], path)
+
+                self.ttIndex += 1
+                self.tptIndex += 1
+
+                if "transfer function box top" in data.columns and self.tfbtList[self.tfbtIndex] == 'yes':
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box top"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 top"], "entry", self.k1tList[self.k1tIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 top"], "entry", self.k2tList[self.k2tIndex], path)
+                    self.tfbtIndex += 1
+                    self.k1tIndex += 1
+                    self.k2tIndex += 1
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.ct3Count = 0
+                # time.sleep(0.5)
+
+            elif i == "criteria middle" and self.perLayer == "performance button layer 3" and self.cm3Count > 0:
+                path = Config.DATA_PATH + r"\per3Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cmList[self.cmIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cmList[self.cmIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cmList[self.cmIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tmList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpmList[self.tpmIndex], path)
+
+                self.tmIndex += 1
+                self.tpmIndex += 1
+
+                if "transfer function box middle" in data.columns and self.tfbmList[self.tfbmIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box middle"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 middle"], "entry", self.k1mList[self.k1mIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 middle"], "entry", self.k2mList[self.k2mIndex], path)
+                    self.tfbmIndex += 1
+                    self.k1mIndex += 1
+                    self.k2mIndex += 1
+
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.cm3Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "criteria bottom" and self.perLayer == "performance button layer 3" and self.cb3Count > 0:
+                path = Config.DATA_PATH + r"\per3Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cbList[self.cbIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cbList[self.cbIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cbList[self.cbIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tbList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpbList[self.tpbIndex], path)
+
+                self.tbIndex += 1
+                self.tpbIndex += 1
+
+                if "transfer function box bottom" in data.columns and self.tfbbList[self.tfbbIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box bottom"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 bottom"], "entry", self.k1bList[self.k1bIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 bottom"], "entry", self.k2bList[self.k2bIndex], path)
+                    self.tfbbIndex += 1
+                    self.k1bIndex += 1
+                    self.k2bIndex += 1
+
+
+                ahkHandler.appendToFile('', 'sleep', '', path)
+                self.cb3Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "material type layer 4" and self.mt4Count > 0:
                 num = '1'
                 if self.mt4List[self.mt4Index] is nan:
                     self.mt4List[self.mt4Index] += 1
@@ -802,6 +1372,7 @@ class InputHandler:
                     num = '10'
 
                 self.mt4Index += 1
+                self.mt4Count = 0
 
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -810,7 +1381,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "grade upper layer 4":
+            elif i == "grade upper layer 4" and self.gu4Count > 0:
                 num = '1'
                 if self.gu4List[self.gu4Index] is nan:
                     self.gu4Index += 1
@@ -832,6 +1403,7 @@ class InputHandler:
                     num = '7'
 
                 self.gu4Index += 1
+                self.gu4Count = 0
 
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -840,7 +1412,7 @@ class InputHandler:
                 time.sleep(0.5)
 
 
-            elif i == "grade lower layer 4":
+            elif i == "grade lower layer 4" and self.gl4Count > 0:
                 num = '1'
                 if self.gl4List[self.gl4Index] is nan:
                     self.gl4Index += 1
@@ -860,6 +1432,7 @@ class InputHandler:
                     num = '6'
 
                 self.gl4Index += 1
+                self.gl4Count = 0
 
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -878,7 +1451,7 @@ class InputHandler:
                 # ahk.run_script(ahkScript, blocking=False)
                 self.mod4Index += 1
 
-            elif i == "poisons ratio layer 4":
+            elif i == "poisons ratio layer 4" and self.pr4Count > 0:
                 # time.sleep(0.5)
                 if self.pr4List[self.pr4Index] is nan:
                     self.pr4Index += 1
@@ -891,10 +1464,11 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.pr4Index += 1
+                self.pr4Count = 0
                 time.sleep(0.5)
 
 
-            elif i == "thickness layer 4":
+            elif i == "thickness layer 4" and self.t4Count > 0:
                 # time.sleep(0.5)
                 if self.thickness4List[self.thickness4Index] is nan:
                     self.thickness4Index += 1
@@ -906,12 +1480,170 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.thickness4Index += 1
+                self.t4Count = 0
                 time.sleep(0.5)
 
+            elif i == "distribution type modulus" and self.varLayer == "variability button layer 4" and self.dtm4Count > 0:
+                # time.sleep(0.5)
+                # print(i)
+                num1 = '1'
+                if self.dtmList[self.dtmIndex].lower() == "normal":
+                    num1 = '1'
+                elif self.dtmList[self.dtmIndex].lower() == "log normal" or self.dtmList[self.dtmIndex].lower() == "log-normal":
+                    num1 = '2'
+
+                num2 = '1'
+                if self.dttList[self.dttIndex].lower() == "normal":
+                    num2 = '1'
+                elif self.dttList[self.dttIndex].lower() == "log normal" or self.dttList[self.dttIndex].lower() == "log-normal":
+                    num2 = '2'
+
+                path = Config.DATA_PATH + r"\var4Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[i],"variabilityDropDown", num1, path, self.varLayer)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation modulus"], "entry", self.cvmList[self.cvmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["distribution type thickness"], "simpleDropDown", num2, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation thickness"], "lastEntry", self.cvtList[self.cvtIndex], path)
+                self.dtmIndex += 1
+                self.cvmIndex += 1
+                self.dttIndex += 1
+                self.cvtIndex += 1
+                self.dtm4Count = 0
+
+                time.sleep(0.5)
+
+            elif i == "criteria top" and self.perLayer == "performance button layer 4" and self.ct4Count > 0:
+                path = Config.DATA_PATH + r"\per4Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[self.perLayer], "clickButton", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.ctList[self.ctIndex].lower() == "Horizontal Stress".lower():
+                    num = '1'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.ctList[self.ctIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.ctList[self.ctIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.ctList[self.ctIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["top"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria top"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold top"], "entry", self.ttList[self.ttIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile top"], "entry", self.tptList[self.tptIndex], path)
+
+                self.ttIndex += 1
+                self.tptIndex += 1
+
+                if "transfer function box top" in data.columns and self.tfbtList[self.tfbtIndex] == 'yes':
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box top"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 top"], "entry", self.k1tList[self.k1tIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 top"], "entry", self.k2tList[self.k2tIndex], path)
+                    self.tfbtIndex += 1
+                    self.k1tIndex += 1
+                    self.k2tIndex += 1
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.ct4Count = 0
+                # time.sleep(0.5)
+
+            elif i == "criteria middle" and self.perLayer == "performance button layer 4" and self.cm4Count > 0:
+                path = Config.DATA_PATH + r"\per4Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cmList[self.cmIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cmList[self.cmIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cmList[self.cmIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tmList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpmList[self.tpmIndex], path)
+
+                self.tmIndex += 1
+                self.tpmIndex += 1
+
+                if "transfer function box middle" in data.columns and self.tfbmList[self.tfbmIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box middle"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 middle"], "entry", self.k1mList[self.k1mIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 middle"], "entry", self.k2mList[self.k2mIndex], path)
+                    self.tfbmIndex += 1
+                    self.k1mIndex += 1
+                    self.k2mIndex += 1
 
 
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.cm4Count = 0
+            #     time.sleep(0.5)
 
-            elif i == "material type layer 5":
+            elif i == "criteria bottom" and self.perLayer == "performance button layer 4" and self.cb4Count > 0:
+                path = Config.DATA_PATH + r"\per4Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cbList[self.cbIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cbList[self.cbIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cbList[self.cbIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tbList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpbList[self.tpbIndex], path)
+
+                self.tbIndex += 1
+                self.tpbIndex += 1
+
+                if "transfer function box bottom" in data.columns and self.tfbbList[self.tfbbIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box bottom"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 bottom"], "entry", self.k1bList[self.k1bIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 bottom"], "entry", self.k2bList[self.k2bIndex], path)
+                    self.tfbbIndex += 1
+                    self.k1bIndex += 1
+                    self.k2bIndex += 1
+
+
+                ahkHandler.appendToFile('', 'sleep', '', path)
+                self.cb4Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "material type layer 5" and self.mt5Count > 0:
                 num = '1'
                 if self.mt5List[self.mt5Index] is nan:
                     self.mt5List[self.mt5Index] += 1
@@ -927,6 +1659,7 @@ class InputHandler:
                     num = '4'
 
                 self.mt5Index += 1
+                self.mt5Count = 0
 
                 # ahkHandler.appendToFile(Constant.headerToClassNN[i], "dropDown", num, Config.DATA_PATH + r"\modAuto.ahk")
                 ahkHandler.writeFile(Constant.headerToClassNN[i], "dropDown", num)
@@ -946,7 +1679,7 @@ class InputHandler:
                 # ahk.run_script(ahkScript, blocking=False)
                 self.mod5Index += 1
 
-            elif i == "poisons ratio layer 5":
+            elif i == "poisons ratio layer 5" and self.pr5Count > 0:
                 # time.sleep(0.5)
                 if self.pr5List[self.pr5Index] is nan:
                     self.pr5Index += 1
@@ -958,66 +1691,301 @@ class InputHandler:
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 self.pr5Index += 1
+                self.pr5Count = 0
                 time.sleep(0.5)
 
+            elif i == "distribution type modulus" and self.varLayer == "variability button layer 5" and self.dtm5Count > 0:
+                # time.sleep(0.5)
+                # print(i)
+                num1 = '1'
+                if self.dtmList[self.dtmIndex].lower() == "normal":
+                    num1 = '1'
+                elif self.dtmList[self.dtmIndex].lower() == "log normal" or self.dtmList[self.dtmIndex].lower() == "log-normal":
+                    num1 = '2'
 
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod4Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod4Auto.ahk")
-        #
-        # time.sleep(2)
-        #
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod5Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod5Auto.ahk")
-        #
-        # time.sleep(2)
+                num2 = '1'
+                if self.dttList[self.dttIndex].lower() == "normal":
+                    num2 = '1'
+                elif self.dttList[self.dttIndex].lower() == "log normal" or self.dttList[self.dttIndex].lower() == "log-normal":
+                    num2 = '2'
 
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var1Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        # ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var1Auto.ahk")
+                path = Config.DATA_PATH + r"\var5Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[i],"variabilityDropDown", num1, path, self.varLayer)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation modulus"], "entry", self.cvmList[self.cvmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["distribution type thickness"], "simpleDropDown", num2, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["coefficient of variation thickness"], "lastEntry", self.cvtList[self.cvtIndex], path)
+                self.dtmIndex += 1
+                self.cvmIndex += 1
+                self.dttIndex += 1
+                self.cvtIndex += 1
+                self.dtm5Count = 0
 
-        # time.sleep(2)
+                time.sleep(0.5)
 
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var2Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var2Auto.ahk")
+            elif i == "criteria top" and self.perLayer == "performance button layer 5" and self.ct5Count > 0:
+                path = Config.DATA_PATH + r"\per5Auto.ahk"
+                ahkHandler.appendToFile(Constant.headerToClassNN[self.perLayer], "clickButton", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
 
-        # time.sleep(2)
+                num = '1'
+                if self.ctList[self.ctIndex].lower() == "Horizontal Stress".lower():
+                    num = '1'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.ctList[self.ctIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.ctList[self.ctIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.ctList[self.ctIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.ctList[self.ctIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
 
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var3Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var3Auto.ahk")
+                ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["top"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria top"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold top"], "entry", self.ttList[self.ttIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile top"], "entry", self.tptList[self.tptIndex], path)
 
-        # time.sleep(2)
+                self.ttIndex += 1
+                self.tptIndex += 1
 
-        ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod1Auto.ahk")
-        ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod1Auto.ahk")
+                if "transfer function box top" in data.columns and self.tfbtList[self.tfbtIndex] == 'yes':
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box top"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 top"], "entry", self.k1tList[self.k1tIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 top"], "entry", self.k2tList[self.k2tIndex], path)
+                    self.tfbtIndex += 1
+                    self.k1tIndex += 1
+                    self.k2tIndex += 1
 
-        time.sleep(2)
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.ct5Count = 0
+                # time.sleep(0.5)
 
-        ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod2Auto.ahk")
-        ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod2Auto.ahk")
+            elif i == "criteria middle" and self.perLayer == "performance button layer 5" and self.cm5Count > 0:
+                path = Config.DATA_PATH + r"\per5Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
 
-        time.sleep(2)
+                num = '1'
+                if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cmList[self.cmIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cmList[self.cmIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cmList[self.cmIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cmList[self.cmIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
 
-        ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod3Auto.ahk")
-        ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod3Auto.ahk")
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tmList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpmList[self.tpmIndex], path)
 
-        # time.sleep(2)
+                self.tmIndex += 1
+                self.tpmIndex += 1
 
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var4Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var4Auto.ahk")
-        #
-        # time.sleep(2)
-        #
-        # ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var5Auto.ahk")
-        # ahk.run_script(ahkScript, blocking=False)
-        ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var5Auto.ahk")
+                if "transfer function box middle" in data.columns and self.tfbmList[self.tfbmIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box middle"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 middle"], "entry", self.k1mList[self.k1mIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 middle"], "entry", self.k2mList[self.k2mIndex], path)
+                    self.tfbmIndex += 1
+                    self.k1mIndex += 1
+                    self.k2mIndex += 1
+
+
+                # ahkHandler.appendToFile('', 'sendEnter', '', path)
+                ahkHandler.appendToFile('', "sleep", '', path)
+                self.cm5Count = 0
+            #     time.sleep(0.5)
+
+            elif i == "criteria bottom" and self.perLayer == "performance button layer 5" and self.cb5Count > 0:
+                path = Config.DATA_PATH + r"\per5Auto.ahk"
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                # ahkHandler.appendToFile('', "sleep", '', path)
+
+                num = '1'
+                if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
+                        num = '1'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Stress".lower():
+                    num = '2'
+                elif self.cbList[self.cbIndex].lower() == "Principal Stress".lower():
+                    num = '3'
+                elif self.cbList[self.cbIndex].lower() == "Horizontal Strain".lower():
+                    num = '4'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Strain".lower():
+                    num = '5'
+                elif self.cbList[self.cbIndex].lower() == "Principal Strain".lower():
+                    num = '6'
+                elif self.cbList[self.cbIndex].lower() == "Vertical Deflection".lower():
+                    num = '7'
+
+                # ahkHandler.appendToFile('', "sleep", '', path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["middle"], "checkBox", True, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["criteria middle"], "dropDown", num, path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["threshold middle"], "entry", self.tbList[self.tmIndex], path)
+                ahkHandler.appendToFile(Constant.headerToClassNN["target percentile middle"], "entry", self.tpbList[self.tpbIndex], path)
+
+                self.tbIndex += 1
+                self.tpbIndex += 1
+
+                if "transfer function box bottom" in data.columns and self.tfbbList[self.tfbbIndex] == 'yes':
+                    # ahkHandler.appendToFile('', "sleep", '', path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["transfer function box bottom"], "checkBox", True, path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k1 bottom"], "entry", self.k1bList[self.k1bIndex], path)
+                    ahkHandler.appendToFile(Constant.headerToClassNN["k2 bottom"], "entry", self.k2bList[self.k2bIndex], path)
+                    self.tfbbIndex += 1
+                    self.k1bIndex += 1
+                    self.k2bIndex += 1
+
+
+                ahkHandler.appendToFile('', 'sleep', '', path)
+                self.cb5Count = 0
+            #     time.sleep(0.5)
+
+        numLayers = data["no of layers"][currInputSet]
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var1Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var1Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var2Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var2Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var3Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var3Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var4Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var4Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var5Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var5Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(4)
+
+        numLayers = data["no of layers"][currInputSet]
+
+        if numLayers > 0:
+            ahkHandler.appendToFile('', 'justSendEnter', '', Config.DATA_PATH + r"\per1Auto.ahk")
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\per1Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\per1Auto.ahk")
+            numLayers -= 1
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkHandler.appendToFile('', 'justSendEnter', '', Config.DATA_PATH + r"\per2Auto.ahk")
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\per2Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            # print(ahkScript)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\per2Auto.ahk")
+            numLayers -= 1
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkHandler.appendToFile('', 'justSendEnter', '', Config.DATA_PATH + r"\per3Auto.ahk")
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\per3Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            # print(ahkScript)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\per3Auto.ahk")
+            numLayers -= 1
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkHandler.appendToFile('', 'justSendEnter', '', Config.DATA_PATH + r"\per4Auto.ahk")
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\per4Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            # print(ahkScript)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\per4Auto.ahk")
+            numLayers -= 1
+            time.sleep(4)
+
+        if numLayers > 0:
+            ahkHandler.appendToFile('', 'justSendEnter', '', Config.DATA_PATH + r"\per5Auto.ahk")
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\per5Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            # print(ahkScript)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\per5Auto.ahk")
+            numLayers -= 1
+            time.sleep(4)
+
+        numLayers = data["no of layers"][currInputSet]
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod1Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod1Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(2)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod2Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod2Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(2)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod3Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod3Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(2)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod4Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod4Auto.ahk")
+            numLayers -= 1
+
+            time.sleep(2)
+
+        if numLayers > 0:
+            ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod5Auto.ahk")
+            ahk.run_script(ahkScript, blocking=False)
+            ahkHandler.clearFile(filename=Config.DATA_PATH + r"\mod5Auto.ahk")
+            numLayers -= 1
+
+        ahk.run_script("Send, {Enter}\nSleep, 2\n")
+
+
+
 
     def loadSpectraInput(self, ahk):
         # select the input tab to input structure details

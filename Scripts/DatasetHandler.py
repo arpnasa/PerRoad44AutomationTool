@@ -90,16 +90,16 @@ class DataSetHandler:
                             data[i][j + 6] += ' top'
                             data[i][j + 7] += ' top'
 
-                if 'position medium' in str(data[i][j]):
-                    data[i][j + 1] += ' medium'
-                    data[i][j + 2] += ' medium'
-                    data[i][j + 3] += ' medium'
+                if 'position middle' in str(data[i][j]):
+                    data[i][j + 1] += ' middle'
+                    data[i][j + 2] += ' middle'
+                    data[i][j + 3] += ' middle'
                     temp = list(data.iloc[j + 1])
                     if 'vertical strain' in temp or 'horizontal strain' in temp:
-                        data[i][j + 5] += ' medium'
+                        data[i][j + 5] += ' middle'
                         if data[i][j + 6] == 'k1' and data[i][j + 7] == 'k2':
-                            data[i][j + 6] += ' medium'
-                            data[i][j + 7] += ' medium'
+                            data[i][j + 6] += ' middle'
+                            data[i][j + 7] += ' middle'
 
                 if 'position bottom' in str(data[i][j]):
                     data[i][j + 1] += ' bottom'

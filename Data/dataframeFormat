@@ -1,0 +1,479 @@
+  no of layers no of season summer fall winter spring spring 2 current season  \
+0            3            5    yes  yes    yes    yes      yes         summer   
+1            3            5    yes  yes    yes    yes      yes         summer   
+2            3            5    yes  yes    yes    yes      yes         summer   
+
+  material type layer 1 grade upper layer 1 grade lower layer 1  \
+0                    AC                  76                 -22   
+1                    AC                  76                 -22   
+2                    AC                  76                 -22   
+
+  modulus layer 1 poisons ratio layer 1 thickness layer 1  \
+0          550000                   0.2                10   
+1           50000                   0.2                10   
+2           50000                   0.2                10   
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20   
+1                    normal                               20   
+2                    normal                               20   
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6   
+1                  log normal                                  6   
+2                  log normal                                  6   
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 2 grade upper layer 2  \
+0         0         0                    AC                  76
+1         0         0                    AC                  76
+2         0         0                    AC                  76
+
+  grade lower layer 2 modulus layer 2 poisons ratio layer 2 thickness layer 2  \
+0                 -22           57000                   0.2                10
+1                 -22           57000                   0.2                10
+2                 -22           57000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 3 modulus layer 3  \
+0         0         0                  Soil           12000
+1         0         0                  Soil           12000
+2         0         0                  Soil           12000
+
+  poisons ratio layer 3 distribution type modulus  \
+0                   0.2                    normal
+1                   0.2                    normal
+2                   0.2                    normal
+
+  coefficient of variation modulus distribution type thickness  \
+0                               20                  log normal
+1                               20                  log normal
+2                               20                         NaN
+
+  coefficient of variation thickness     criteria top threshold top  \
+0                                  6  vertical stress           545
+1                                  6  vertical stress           545
+2                                NaN  vertical stress           545
+
+  target percentile top  criteria middle threshold middle  \
+0                    50  vertical strain              545
+1                    50  vertical strain              545
+2                    50  vertical strain              545
+
+  target percentile middle transfer function box middle k1 middle k2 middle  \
+0                       50                          yes         0         0
+1                       50                          yes         0         0
+2                       50                          yes         0         0
+
+  current season material type layer 1 grade upper layer 1  \
+0           fall                    AC                  76
+1           fall                    AC                  76
+2           fall                    AC                  76
+
+  grade lower layer 1 modulus layer 1 poisons ratio layer 1 thickness layer 1  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 2 grade upper layer 2  \
+0         0         0                    AC                  76
+1         0         0                    AC                  76
+2         0         0                    AC                  76
+
+  grade lower layer 2 modulus layer 2 poisons ratio layer 2 thickness layer 2  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 3 modulus layer 3  \
+0         0         0                  Soil           12000
+1         0         0                  Soil           12000
+2         0         0                  Soil           12000
+
+  poisons ratio layer 3 distribution type modulus  \
+0                   0.2                    normal
+1                   0.2                    normal
+2                   0.2                    normal
+
+  coefficient of variation modulus distribution type thickness  \
+0                               20                  log normal
+1                               20                  log normal
+2                               20                         NaN
+
+  coefficient of variation thickness     criteria top threshold top  \
+0                                  6  vertical stress           545
+1                                  6  vertical stress           545
+2                                NaN  vertical stress           545
+
+  target percentile top  criteria middle threshold middle  \
+0                    50  vertical strain              545
+1                    50  vertical strain              545
+2                    50  vertical strain              545
+
+  target percentile middle transfer function box middle k1 middle k2 middle  \
+0                       50                          yes         0         0
+1                       50                          yes         0         0
+2                       50                          yes         0         0
+
+  current season material type layer 1 grade upper layer 1  \
+0         winter                    AC                  76
+1         winter                    AC                  76
+2         winter                    AC                  76
+
+  grade lower layer 1 modulus layer 1 poisons ratio layer 1 thickness layer 1  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 2 grade upper layer 2  \
+0         0         0                    AC                  76
+1         0         0                    AC                  76
+2         0         0                    AC                  76
+
+  grade lower layer 2 modulus layer 2 poisons ratio layer 2 thickness layer 2  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 3 modulus layer 3  \
+0         0         0                  Soil           12000
+1         0         0                  Soil           12000
+2         0         0                  Soil           12000
+
+  poisons ratio layer 3 distribution type modulus  \
+0                   0.2                    normal
+1                   0.2                    normal
+2                   0.2                    normal
+
+  coefficient of variation modulus distribution type thickness  \
+0                               20                  log normal
+1                               20                  log normal
+2                               20                         NaN
+
+  coefficient of variation thickness     criteria top threshold top  \
+0                                  6  vertical stress           545
+1                                  6  vertical stress           545
+2                                NaN  vertical stress           545
+
+  target percentile top  criteria middle threshold middle  \
+0                    50  vertical strain              545
+1                    50  vertical strain              545
+2                    50  vertical strain              545
+
+  target percentile middle transfer function box middle k1 middle k2 middle  \
+0                       50                          yes         0         0
+1                       50                          yes         0         0
+2                       50                          yes         0         0
+
+  current season material type layer 1 grade upper layer 1  \
+0         spring                    AC                  76
+1         spring                    AC                  76
+2         spring                    AC                  76
+
+  grade lower layer 1 modulus layer 1 poisons ratio layer 1 thickness layer 1  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 2 grade upper layer 2  \
+0         0         0                    AC                  76
+1         0         0                    AC                  76
+2         0         0                    AC                  76
+
+  grade lower layer 2 modulus layer 2 poisons ratio layer 2 thickness layer 2  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 3 modulus layer 3  \
+0         0         0                  Soil           12000
+1         0         0                  Soil           12000
+2         0         0                  Soil           12000
+
+  poisons ratio layer 3 distribution type modulus  \
+0                   0.2                    normal
+1                   0.2                    normal
+2                   0.2                    normal
+
+  coefficient of variation modulus distribution type thickness  \
+0                               20                  log normal
+1                               20                  log normal
+2                               20                         NaN
+
+  coefficient of variation thickness     criteria top threshold top  \
+0                                  6  vertical stress           545
+1                                  6  vertical stress           545
+2                                NaN  vertical stress           545
+
+  target percentile top  criteria middle threshold middle  \
+0                    50  vertical strain              545
+1                    50  vertical strain              545
+2                    50  vertical strain              545
+
+  target percentile middle transfer function box middle k1 middle k2 middle  \
+0                       50                          yes         0         0
+1                       50                          yes         0         0
+2                       50                          yes         0         0
+
+  current season material type layer 1 grade upper layer 1  \
+0       spring 2                    AC                  76
+1       spring 2                    AC                  76
+2       spring 2                    AC                  76
+
+  grade lower layer 1 modulus layer 1 poisons ratio layer 1 thickness layer 1  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 2 grade upper layer 2  \
+0         0         0                    AC                  76
+1         0         0                    AC                  76
+2         0         0                    AC                  76
+
+  grade lower layer 2 modulus layer 2 poisons ratio layer 2 thickness layer 2  \
+0                 -22          550000                   0.2                10
+1                 -22          550000                   0.2                10
+2                 -22          550000                   0.2                10
+
+  distribution type modulus coefficient of variation modulus  \
+0                    normal                               20
+1                    normal                               20
+2                    normal                               20
+
+  distribution type thickness coefficient of variation thickness  \
+0                  log normal                                  6
+1                  log normal                                  6
+2                  log normal                                  6
+
+      criteria top threshold top target percentile top  criteria middle  \
+0  vertical stress           545                    50  vertical strain
+1  vertical stress           545                    50  vertical strain
+2  vertical stress           545                    50  vertical strain
+
+  threshold middle target percentile middle transfer function box middle  \
+0              545                       50                          yes
+1              545                       50                          yes
+2              545                       50                          yes
+
+  k1 middle k2 middle material type layer 3 modulus layer 3  \
+0         0         0                  Soil           12000
+1         0         0                  Soil           12000
+2         0         0                  Soil           12000
+
+  poisons ratio layer 3 distribution type modulus  \
+0                   0.2                    normal
+1                   0.2                    normal
+2                   0.2                    normal
+
+  coefficient of variation modulus distribution type thickness  \
+0                               20                  log normal
+1                               20                  log normal
+2                               20                         NaN
+
+  coefficient of variation thickness     criteria top threshold top  \
+0                                  6  vertical stress           545
+1                                  6  vertical stress           545
+2                                NaN  vertical stress           545
+
+  target percentile top  criteria middle threshold middle  \
+0                    50  vertical strain              545
+1                    50  vertical strain              545
+2                    50  vertical strain              545
+
+  target percentile middle transfer function box middle k1 middle k2 middle  \
+0                       50                          yes         0         0
+1                       50                          yes         0         0
+2                       50                          yes         0         0
+
+  two way aadt % trucks % trucks in design lane axle groups/day  \
+0         5000       10                      90             136
+1         5000       10                      90             136
+2         5000       10                      90             136
+
+  % truck growth directional distribution single tandem tridem steer  \
+0              4                       50  50.43     40     10     0
+1              4                       50  50.43     40     10     0
+2              4                       50  50.43     40     10     0
+
+  roadway functional classification class 4  class 5 class 6 class 7 class 8  \
+0                  rural interstate      1.2     9.4     3.3     1.2     1.2
+1                  rural interstate      1.2     9.4     3.3     1.2     1.2
+2                  rural interstate      1.2     9.4     3.3     1.2     1.2
+
+  class 9 class 10 class 11 class 12 class 13 number of cycles save filename  \
+0    68.9      1.2      1.2      1.2     11.2              100     demo1.xls
+1    68.9      1.2      1.2      1.2     11.2              100     demo2.xls
+2    68.9      1.2      1.2      1.2     11.2              100     demo3.xls
+
+    filename report
+0  report_demo1.xls
+1  report_demo2.xls
+2  report_demo3.xls
