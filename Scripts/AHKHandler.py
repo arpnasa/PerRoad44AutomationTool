@@ -2,6 +2,12 @@ from Configuration import Constant, Config
 
 
 class AHKHandler:
+
+    def writeToFile(self, s, filename):
+        f = open(filename, "a")
+        f.write(s)
+        f.write("\n")
+
     def writeFile(self, variable, Type, check, varLayer=''):
         f = open(Config.DATA_PATH + r"\auto.ahk", "w+")
 
@@ -11,6 +17,7 @@ class AHKHandler:
                 f.write(Constant.CONTROL_FOCUS + variable + Constant.AHK_EXE)
                 # f.write("Control, Enable,," + variable + Constant.AHK_EXE)
                 f.write(Constant.SET_CONTROL_DELAY + Constant.CONTROL_CHECK + variable + Constant.AHK_EXE)
+                # f.write("Sleep, 2\n")
 
             else:
                 f.write(Constant.CONTROL_FOCUS + variable + Constant.AHK_EXE)

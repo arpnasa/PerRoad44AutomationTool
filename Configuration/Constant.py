@@ -116,6 +116,7 @@ headerToClassNN = {
     "tridem": "Edit122",
     "steer": "Edit123",
 
+    "current axle drop down": "ComboBox1",
 
     "0-2": "Edit3",
     "2-4": "Edit4",
@@ -173,7 +174,8 @@ headerToClassNN = {
     "106-108": "Edit56",
     "108-110": "Edit57",
     "110+": "Edit58",
-    "total axle load distribution": "Edit117",
+
+    "load spectra button": "Button10",
 
 
     "roadway functional classification": "ComboBox1",
@@ -187,8 +189,8 @@ headerToClassNN = {
     "class 11": "Edit8",
     "class 12": "Edit9",
     "class 13": "Edit10",
-    "total vehicle type distribution": "Edit11",
-    "class 4 single ": "Edit12",
+
+    "class 4 single": "Edit12",
     "class 5 single": "Edit13",
     "class 6 single": "Edit14",
     "class 7 single": "Edit15",
@@ -219,6 +221,16 @@ headerToClassNN = {
     "class 12 tridem": "Edit40",
     "class 13 tridem": "Edit41",
 
+    "perform analysis": "Button2",
+    "set mote carlo cycles": "Button11",
+    "export": "Button15",
+    "cost analysis": "Button4",
+    "leave": "Button6",
+    "ok": "Button1",
+
+    "save path": "Edit1",
+    "save": "Button2",
+
 
     "number of cycles": "Edit1",
 
@@ -240,8 +252,15 @@ SET_CONTROL_DELAY = "SetControlDelay -1\n"
 CONTROL_FOCUS = "ControlFocus,"
 CONTROL_SEND = "ControlSend,"
 
+STRUCT_INPUT_SUB_MENU = "WinMenuSelectItem,PerRoad 4.4,,Input,Structure..."
+SPECT_INPUT_SUB_MENU = "WinMenuSelectItem,PerRoad 4.4,,Input,Load Spectra..."
+VIEW_OUTPUT_SUB_MENU = "WinMenuSelectItem,PerRoad 4.4,,Output,View Output..."
+
 # l =list()
 # for i in headerToClassNN.keys():
 #     l.append((i,headerToClassNN[i]))
 #
 # print(l)
+
+# for i in headerToClassNN.keys():
+#     print("elif i == \"" + i + "\":\n")

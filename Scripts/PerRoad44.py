@@ -1,13 +1,13 @@
-from collections import OrderedDict
-
+import time
+import os
 
 from ahk import AHK
-from Scripts.InputHandler import InputHandler
+from Scripts.StructuralInputHandler import StructuralInputHandler
+from Scripts.SpectralInputHandler import SpectralInputHandler
 from Scripts.OutputHandler import OutputHandler
 from Configuration import Config
 from Scripts.DatasetHandler import DataSetHandler
-
-import pandas as pd
+from Scripts.ResetToDefault import ResetToDefault
 
 class PerRoad44:
     def __init__(self):
@@ -19,17 +19,21 @@ class PerRoad44:
 if __name__ == '__main__':
     pp = PerRoad44()
 
-    # run the software
-    pp.runPerRoad44()
+
 
     # define the InputHandler
-    ip = InputHandler()
+    structIP = StructuralInputHandler()
+
+    specIP = SpectralInputHandler()
 
     # define the OutputHandler
     op = OutputHandler()
 
     # define the DatasetHandler
     dh = DataSetHandler()
+
+    # to reset the fields
+    reset = ResetToDefault()
 
     # read the input file and store it in a Pandas dataframe
     d = dh.readInputFile()
@@ -38,27 +42,32 @@ if __name__ == '__main__':
     data = dh.cleanDataset(d)
 
 
-    ip.loadStructuralInput(pp.ahk, data)
-    # ip.loadSpectraInput(pp.ahk)
-    # op.downlaodOutput(pp.ahk)
+    for currInputSet in range(0,len(data)):
+        time.sleep(2)
 
-    # note: here the data is accessed by [col][row]
-    row = len(data.axes[0])
-    col = len(data.axes[1])
+        # run the software
+        pp.runPerRoad44()
 
-    # print(row, col)
+        time.sleep(2)
 
-    h = dh.header
-    h = list(OrderedDict.fromkeys(h))
-    # print(*h, sep='\n')
+        structIP.loadStructuralInput(pp.ahk, data.iloc[currInputSet])
 
-    # print(data["fall"])
-    # print(data["winter"])
-    # print(data["spring"])
-    # print(data["spring 2"])
+        time.sleep(2)
 
-    with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-        print(data)
-    # print(data)
-    # print(data['current season'])
-    # print(data.columns)
+        specIP.loadSpectraInput(pp.ahk, data.iloc[currInputSet])
+
+        time.sleep(2)
+
+        op.downlaodOutput(pp.ahk, data.iloc[currInputSet])
+
+        time.sleep(2)
+
+        reset.closeSoftware(pp.ahk)
+
+
+    path = Config.OUTPUT_PATH[:-1]
+    files = os.listdir(path)
+
+    for index, file in enumerate(files):
+        if '.' not in file:
+            os.rename(os.path.join(path, file), os.path.join(path, ''.join([file, '.xlsx'])))

@@ -7,142 +7,150 @@ from numpy import nan
 from Configuration import Constant, Config
 from Scripts.AHKHandler import AHKHandler
 
-class InputHandler:
+class StructuralInputHandler:
     def loadStructuralInput(self, ahk, data):
         # select the input tab to input structure details
-        winStructInputTab = ahk.find_window(title=b'PerRoad 4.4')
-        winStructInputTab.send(autopy.key.tap(autopy.key.Code.F1))
+        ahk.run_script(Constant.STRUCT_INPUT_SUB_MENU)
         ahk.run_script('SetWinDelay, 10')
         ahk.run_script('SetWinDelay, 1000')
 
         ahkHandler = AHKHandler()
 
-        currInputSet = 0
+        data = pd.DataFrame(data)
+        data = pd.DataFrame(data.transpose())
+
+        # print((data["no of layers"] == 3).bool())
+        # with pd.option_context('display.max_rows', None, 'display.max_columns',
+        #                        None):  # more options can be specified also
+        #     print(data)
+
+        # print(data["poisons ratio layer 1"].values[0][0])
 
         if "current season" in data.columns:
-            currSeason = data["current season"]
-            self.csList = list(currSeason.iloc[currInputSet]) # later [0] = input set / j ... ie, each jth input contains number of season values
+            self.csList = list(data["current season"])
+            # self.csList = list(currSeason.iloc[currInputSet]) # later [0] = input set / j ... ie, each jth input contains number of season values
             self.csIndex = 0
 
         if "material type layer 1" in data.columns:
             materialType1 = data["material type layer 1"]
-            self.mt1List = list(materialType1.iloc[currInputSet])
+            self.mt1List = list(materialType1)
             self.mt1Index = 0
             self.mt1Count = 1
         # print(list(materialType1.iloc[0])) # prints the first row of the dataframe ie, for the 1st input set
 
         if "material type layer 2" in data.columns:
             materialType2 = data["material type layer 2"]
-            self.mt2List = list(materialType2.iloc[currInputSet])
+            self.mt2List = materialType2.values[0]
+            # print(self.mt2List)
             self.mt2Index = 0
             self.mt2Count = 1
 
         if "material type layer 3" in data.columns:
             materialType3 = data["material type layer 3"]
-            self.mt3List = list(materialType3.iloc[currInputSet])
+            self.mt3List = materialType3.values[0]
             self.mt3Index = 0
             self.mt3Count = 1
 
         if "material type layer 4" in data.columns:
             materialType4 = data["material type layer 4"]
-            self.mt4List = list(materialType4.iloc[currInputSet])
+            self.mt4List = materialType4.values[0]
             self.mt4Index = 0
             self.mt4Count = 1
 
         if "material type layer 5" in data.columns:
             materialType5 = data["material type layer 5"]
-            self.mt5List = list(materialType5.iloc[currInputSet])
+            self.mt5List = materialType5.values[0]
             self.mt5Index = 0
             self.mt5Count = 1
 
         if "grade upper layer 1" in data.columns:
             gradeUpper1 = data["grade upper layer 1"]
-            self.gu1List = list(gradeUpper1.iloc[currInputSet])
+            self.gu1List = gradeUpper1.values[0]
             self.gu1Index = 0
             self.gu1Count = 1
 
         if "grade upper layer 2" in data.columns:
             gradeUpper2 = data["grade upper layer 2"]
-            self.gu2List = list(gradeUpper2.iloc[currInputSet])
+            self.gu2List = gradeUpper2.values[0]
             self.gu2Index = 0
             self.gu2Count = 1
 
         if "grade upper layer 3" in data.columns:
             gradeUpper3 = data["grade upper layer 3"]
-            self.gu3List = list(gradeUpper3.iloc[currInputSet])
+            self.gu3List = gradeUpper3.values[0]
             self.gu3Index = 0
             self.gu3Count = 1
 
         if "grade upper layer 4" in data.columns:
             gradeUpper4 = data["grade upper layer 4"]
-            self.gu4List = list(gradeUpper4.iloc[currInputSet])
+            self.gu4List = gradeUpper4.values[0]
             self.gu4Index = 0
             self.gu4Count = 1
 
         if "grade lower layer 1" in data.columns:
             gradeLower1 = data["grade lower layer 1"]
-            self.gl1List = list(gradeLower1.iloc[currInputSet])
+            self.gl1List = gradeLower1.values[0]
             self.gl1Index = 0
             self.gl1Count = 1
 
         if "grade lower layer 2" in data.columns:
             gradeLower2 = data["grade lower layer 2"]
-            self.gl2List = list(gradeLower2.iloc[currInputSet])
+            self.gl2List = gradeLower2.values[0]
             self.gl2Index = 0
             self.gl2Count = 1
 
         if "grade lower layer 3" in data.columns:
             gradeLower3 = data["grade lower layer 3"]
-            self.gl3List = list(gradeLower3.iloc[currInputSet])
+            self.gl3List = gradeLower3.values[0]
             self.gl3Index = 0
             self.gl3Count = 1
 
         if "grade lower layer 4" in data.columns:
             gradeLower4 = data["grade lower layer 4"]
-            self.gl4List = list(gradeLower4.iloc[currInputSet])
+            self.gl4List = gradeLower4.values[0]
             self.gl4Index = 0
             self.gl4Count = 1
 
         if "modulus layer 1" in data.columns:
             mod1 = data["modulus layer 1"]
-            self.mod1List = list(mod1.iloc[currInputSet])
+            self.mod1List = mod1.values[0]
             # print(self.mod1List)
             self.mod1Index = 0
 
         if "modulus layer 2" in data.columns:
             mod2 = data["modulus layer 2"]
-            self.mod2List = list(mod2.iloc[currInputSet])
+            self.mod2List = mod2.values[0]
             # print(self.mod2List)
             self.mod2Index = 0
 
         if "modulus layer 3" in data.columns:
             mod3 = data["modulus layer 3"]
-            self.mod3List = list(mod3.iloc[currInputSet])
+            self.mod3List = mod3.values[0]
             # print(self.mod3List)
             self.mod3Index = 0
 
         if "modulus layer 4" in data.columns:
             mod4 = data["modulus layer 4"]
-            self.mod4List = list(mod4.iloc[currInputSet])
+            self.mod4List = mod4.values[0]
             # print(self.mod4List)
             self.mod4Index = 0
 
         if "modulus layer 5" in data.columns:
             mod5 = data["modulus layer 5"]
-            self.mod5List = list(mod5.iloc[currInputSet])
+            self.mod5List = mod5.values[0]
             print(self.mod5List)
             self.mod5Index = 0
 
         if "poisons ratio layer 1" in data.columns:
             pr1 = data["poisons ratio layer 1"]
-            self.pr1List = list(pr1.iloc[currInputSet])
+            self.pr1List = pr1.values[0]
             # print(self.pr1List)
             self.pr1Index = 0
             self.pr1Count = 1
 
         if "poisons ratio layer 2" in data.columns:
             pr2 = data["poisons ratio layer 2"]
-            self.pr2List = list(pr2.iloc[currInputSet])
+            self.pr2List = pr2.values[0]
             # print("hi")
             # print(self.pr2List)
             self.pr2Index = 0
@@ -150,53 +158,53 @@ class InputHandler:
 
         if "poisons ratio layer 3" in data.columns:
             pr3 = data["poisons ratio layer 3"]
-            self.pr3List = list(pr3.iloc[currInputSet])
+            self.pr3List = pr3.values[0]
             self.pr3Index = 0
             self.pr3Count = 1
 
         if "poisons ratio layer 4" in data.columns:
             pr4 = data["poisons ratio layer 4"]
-            self.pr4List = list(pr4.iloc[currInputSet])
+            self.pr4List = pr4.values[0]
             self.pr4Index = 0
             self.pr4Count = 1
 
         if "poisons ratio layer 5" in data.columns:
             pr5 = data["poisons ratio layer 5"]
-            self.pr5List = list(pr5.iloc[currInputSet])
+            self.pr5List = pr5.values[0]
             self.pr5Index = 0
             self.pr5Count = 1
 
         if "thickness layer 1" in data.columns:
             thickness1 = data["thickness layer 1"]
-            self.thickness1List = list(thickness1.iloc[currInputSet])
+            self.thickness1List = thickness1.values[0]
             # print(self.thickness1List)
             self.thickness1Index = 0
             self.t1Count = 1
 
         if "thickness layer 2" in data.columns:
             thickness2 = data["thickness layer 2"]
-            self.thickness2List = list(thickness2.iloc[currInputSet])
+            self.thickness2List = thickness2.values[0]
             # print(self.thickness2List)
             self.thickness2Index = 0
             self.t2Count = 1
 
         if "thickness layer 3" in data.columns:
             thickness3 = data["thickness layer 3"]
-            self.thickness3List = list(thickness3.iloc[currInputSet])
+            self.thickness3List = thickness3.values[0]
             # print(self.thickness3List)
             self.thickness3Index = 0
             self.t3Count = 1
 
         if "thickness layer 4" in data.columns:
             thickness4 = data["thickness layer 4"]
-            self.thickness4List = list(thickness4.iloc[currInputSet])
+            self.thickness4List = thickness4.values[0]
             # print(self.thickness4List)
             self.thickness4Index = 0
             self.t4Count = 1
 
         if "distribution type modulus" in data.columns:
             dtm = data["distribution type modulus"]
-            self.dtmList = list(dtm.iloc[currInputSet])
+            self.dtmList = dtm.values[0]
             # print(self.dtmList)
             self.dtmIndex = 0
             self.dtm1Count = 1
@@ -207,24 +215,24 @@ class InputHandler:
 
         if "distribution type thickness" in data.columns:
             dtt = data["distribution type thickness"]
-            self.dttList = list(dtt.iloc[currInputSet])
+            self.dttList = dtt.values[0]
             # print(self.dtmList)
             self.dttIndex = 0
 
         if "coefficient of variation modulus" in data.columns:
             cvm = data["coefficient of variation modulus"]
-            self.cvmList = list(cvm.iloc[currInputSet])
+            self.cvmList = cvm.values[0]
             self.cvmIndex = 0
 
         if "coefficient of variation thickness" in data.columns:
             cvt = data["coefficient of variation thickness"]
-            self.cvtList = list(cvt.iloc[currInputSet])
+            self.cvtList = cvt.values[0]
             # print(self.dtmList)
             self.cvtIndex = 0
 
         if "criteria top" in data.columns:
             ct = data["criteria top"]
-            self.ctList = list(ct.iloc[currInputSet])
+            self.ctList = ct.values[0]
             # print(self.ctList)
             self.ctIndex = 0
             self.ct1Count = 1
@@ -235,7 +243,7 @@ class InputHandler:
 
         if "criteria middle" in data.columns:
             cm = data["criteria middle"]
-            self.cmList = list(cm.iloc[currInputSet])
+            self.cmList = cm.values[0]
             self.cmIndex = 0
             self.cm1Count = 1
             self.cm2Count = 1
@@ -245,7 +253,7 @@ class InputHandler:
 
         if "criteria bottom" in data.columns:
             cb = data["criteria bottom"]
-            self.cbList = list(cb.iloc[currInputSet])
+            self.cbList = cb.values[0]
             self.cbIndex = 0
             self.cb1Count = 1
             self.cb2Count = 1
@@ -255,100 +263,104 @@ class InputHandler:
 
         if "threshold top" in data.columns:
             tt = data["threshold top"]
-            self.ttList = list(tt.iloc[currInputSet])
+            self.ttList = tt.values[0]
             self.ttIndex = 0
 
         if "threshold middle" in data.columns:
             tm = data["threshold middle"]
-            self.tmList = list(tm.iloc[currInputSet])
+            self.tmList = tm.values[0]
             self.tmIndex = 0
             self.tmCount = 1
 
         if "threshold bottom" in data.columns:
             tb = data["threshold bottom"]
-            self.tbList = list(tb.iloc[currInputSet])
+            self.tbList = tb.values[0]
             self.tbIndex = 0
             self.tbCount = 1
 
         if "target percentile top" in data.columns:
             tpt = data["target percentile top"]
-            self.tptList = list(tpt.iloc[currInputSet])
+            self.tptList = tpt.values[0]
             self.tptIndex = 0
             self.tptCount = 1
 
         if "target percentile middle" in data.columns:
             tpm = data["target percentile middle"]
-            self.tpmList = list(tpm.iloc[currInputSet])
+            self.tpmList = tpm.values[0]
             self.tpmIndex = 0
             self.tpmCount = 1
 
         if "target percentile bottom" in data.columns:
             tpb = data["criteria bottom"]
-            self.tpbList = list(tpb.iloc[currInputSet])
+            self.tpbList = tpb.values[0]
             self.tpbIndex = 0
             self.tpbCount = 1
 
         if "transfer function box top" in data.columns:
             tfbt = data["transfer function box top"]
-            self.tfbtList = list(tfbt.iloc[currInputSet])
+            self.tfbtList = tfbt.values[0]
             self.tfbtIndex = 0
             self.tfbtCount = 1
 
         if "transfer function box middle" in data.columns:
             tfbm = data["transfer function box middle"]
-            self.tfbmList = list(tfbm.iloc[currInputSet])
+            self.tfbmList = tfbm.values[0]
+            # print(self.tfbmList)
             self.tfbmIndex = 0
             self.tfbmCount = 1
 
         if "transfer function box bottom" in data.columns:
             tfbb = data["transfer function box bottom"]
-            self.tfbbList = list(tfbb.iloc[currInputSet])
+            self.tfbbList = tfbb.values[0]
             self.tfbbIndex = 0
             self.tfbbCount = 1
 
         if "k1 top" in data.columns:
             k1t = data["k1 top"]
-            self.k1tList = list(k1t.iloc[currInputSet])
+            self.k1tList = k1t.values[0]
             self.k1tIndex = 0
             self.k1tCount = 1
 
         if "k1 middle" in data.columns:
             k1m = data["k1 middle"]
-            self.k1mList = list(k1m.iloc[currInputSet])
+            self.k1mList = k1m.values[0]
             self.k1mIndex = 0
             self.k1mCount = 1
 
         if "k1 bottom" in data.columns:
             k1b = data["k1 bottom"]
-            self.k1bList = list(k1b.iloc[currInputSet])
+            self.k1bList = k1b.values[0]
             self.k1bIndex = 0
             self.k1bCount = 1
 
         if "k2 top" in data.columns:
             k2t = data["k2 top"]
-            self.k2tList = list(k2t.iloc[currInputSet])
+            self.k2tList = k2t.values[0]
             self.k2tIndex = 0
             self.k2tCount = 1
 
         if "k2 middle" in data.columns:
             k2m = data["k2 middle"]
-            self.k2mList = list(k2m.iloc[currInputSet])
+            self.k2mList = k2m.values[0]
             self.k2mIndex = 0
             self.k2mCount = 1
 
         if "k2 bottom" in data.columns:
             k2b = data["k2 bottom"]
-            self.k2bList = list(k2b.iloc[currInputSet])
+            self.k2bList = k2b.values[0]
             self.k2bIndex = 0
             self.k2bCount = 1
 
+        # time.sleep(5)
 
         for i in data.columns:
-            i = i.lower()
+            if type(i) == 'str':
+                i = i.lower()
             if i == "summer" or i == "no of season" or i == "transfer function box" or i == "k1" or i == "k2":
                 continue
             elif i == "no of layers":
-                ahkHandler.writeFile(Constant.headerToClassNN[str(data[i][0])], "radioButton", '')
+                # print(data[i].values[0])
+                ahkHandler.writeFile(Constant.headerToClassNN[str(data[i].values[0])], "radioButton", '')
                 ahkScript = ahkHandler.readFile()
                 # print(ahkScript)
                 # print()
@@ -356,7 +368,7 @@ class InputHandler:
                 ahkHandler.clearFile()
 
             elif i == "fall" or i == "winter" or i == "spring" or i == "spring 2":
-                if data[i][0] == 'yes':
+                if data[i].values[0] == 'yes':
                     check = True
                 else:
                     check = False
@@ -367,61 +379,61 @@ class InputHandler:
                 time.sleep(0.5)
 
             elif i == "duration summer":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration summer"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration summer"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "duration fall":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration fall"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration fall"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "duration winter":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration winter"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration winter"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "duration spring":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration spring"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration spring"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "duration spring 2":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration spring 2"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["duration spring 2"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "mean air summer":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air summer"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air summer"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "mean air fall":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air fall"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air fall"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "mean air winter":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air winter"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air winter"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "mean air spring":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air spring"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air spring"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
 
             elif i == "mean air spring 2":
-                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air spring 2"][currInputSet])
+                ahkHandler.writeFile(Constant.headerToClassNN[i], "entry", data["mean air spring 2"].values[0])
                 ahkScript = ahkHandler.readFile()
                 ahk.run_script(ahkScript, blocking=False)
                 time.sleep(0.5)
@@ -954,6 +966,8 @@ class InputHandler:
                 path = Config.DATA_PATH + r"\per2Auto.ahk"
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
+                if (data["no of layers"] == 2).bool():
+                    continue
 
                 num = '1'
                 if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
@@ -999,6 +1013,9 @@ class InputHandler:
                 path = Config.DATA_PATH + r"\per2Auto.ahk"
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
+
+                if (data["no of layers"] == 2).bool():
+                    continue
 
                 num = '1'
                 if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
@@ -1260,6 +1277,9 @@ class InputHandler:
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
 
+                if (data["no of layers"] == 3).bool():
+                    continue
+
                 num = '1'
                 if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
                         num = '1'
@@ -1304,6 +1324,9 @@ class InputHandler:
                 path = Config.DATA_PATH + r"\per3Auto.ahk"
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
+
+                if (data["no of layers"] == 3).bool():
+                    continue
 
                 num = '1'
                 if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
@@ -1559,6 +1582,9 @@ class InputHandler:
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
 
+                if (data["no of layers"] == 4).bool():
+                    continue
+
                 num = '1'
                 if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
                         num = '1'
@@ -1603,6 +1629,9 @@ class InputHandler:
                 path = Config.DATA_PATH + r"\per4Auto.ahk"
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
+
+                if (data["no of layers"] == 4).bool():
+                    continue
 
                 num = '1'
                 if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
@@ -1770,6 +1799,9 @@ class InputHandler:
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
 
+                if (data["no of layers"] == 5).bool():
+                    continue
+
                 num = '1'
                 if self.cmList[self.cmIndex].lower() == "Horizontal Stress".lower():
                         num = '1'
@@ -1815,6 +1847,9 @@ class InputHandler:
                 # ahkHandler.appendToFile('', "sleep", '', path)
                 # ahkHandler.appendToFile('', "sleep", '', path)
 
+                if (data["no of layers"] == 5).bool():
+                    continue
+
                 num = '1'
                 if self.cbList[self.cbIndex].lower() == "Horizontal Stress".lower():
                         num = '1'
@@ -1854,11 +1889,12 @@ class InputHandler:
                 self.cb5Count = 0
             #     time.sleep(0.5)
 
-        numLayers = data["no of layers"][currInputSet]
+        numLayers = data["no of layers"].values[0]
 
         if numLayers > 0:
             ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\var1Auto.ahk")
             ahk.run_script(ahkScript, blocking=False)
+            # print(ahkScript)
             ahkHandler.clearFile(filename=Config.DATA_PATH + r"\var1Auto.ahk")
             numLayers -= 1
 
@@ -1896,7 +1932,7 @@ class InputHandler:
 
             time.sleep(4)
 
-        numLayers = data["no of layers"][currInputSet]
+        numLayers = data["no of layers"].values[0]
 
         if numLayers > 0:
             ahkHandler.appendToFile('', 'justSendEnter', '', Config.DATA_PATH + r"\per1Auto.ahk")
@@ -1942,7 +1978,7 @@ class InputHandler:
             numLayers -= 1
             time.sleep(4)
 
-        numLayers = data["no of layers"][currInputSet]
+        numLayers = data["no of layers"].values[0]
 
         if numLayers > 0:
             ahkScript = ahkHandler.readFile(filename=Config.DATA_PATH + r"\mod1Auto.ahk")
@@ -1983,12 +2019,3 @@ class InputHandler:
             numLayers -= 1
 
         ahk.run_script("Send, {Enter}\nSleep, 2\n")
-
-
-
-
-    def loadSpectraInput(self, ahk):
-        # select the input tab to input structure details
-        winSpectraInputTab = ahk.find_window(title=b'PerRoad 4.4')
-        winSpectraInputTab.send(autopy.key.tap(autopy.key.Code.F2))
-        ahk.run_script('SetWinDelay, 10')
